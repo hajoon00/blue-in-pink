@@ -158,7 +158,7 @@ export default function Summary() {
   const shuffledWords = [...words].sort(() => Math.random() - 0.5);
 
   const handleDownload = async () => {
-    const element = document.getElementById("wordcloud-container");
+    const element = document.querySelector("#wordcloud-container > div > svg");
     if (!element) return;
 
     try {
@@ -166,10 +166,8 @@ export default function Summary() {
 
       // Get SVG data
       const svgData = element.innerHTML;
-      const svgBlob = new Blob(
-        [
-          `
-        <svg width="400" height="500" xmlns="http://www.w3.org/2000/svg">
+      console.log(element);
+      const svgContent = `<svg width="400" height="500" xmlns="http://www.w3.org/2000/svg">
           <style>
             text {
               font-family: 'Octarine Bold', Arial, sans-serif;
@@ -178,17 +176,13 @@ export default function Summary() {
           </style>
           <rect width="100%" height="100%" fill="white"/>
           ${svgData}
-        </svg>
-      `,
-        ],
-        { type: "image/svg+xml;charset=utf-8" }
-      );
+        </svg>`;
+      const encoded = btoa(svgContent);
+      const svgDataURL = `data:image/svg+xml;base64,${encoded}`;
 
       // Convert SVG to Image
-      const url = URL.createObjectURL(svgBlob);
       const img = new Image();
-      img.src = url;
-
+      img.src = svgDataURL;
       await new Promise((resolve) => {
         img.onload = () => {
           const canvas = document.createElement("canvas");
@@ -205,8 +199,6 @@ export default function Summary() {
           link.download = `${userName}-wordcloud.jpg`;
           link.href = canvas.toDataURL("image/jpeg", 1.0);
           link.click();
-
-          URL.revokeObjectURL(url);
           resolve(null);
         };
       });

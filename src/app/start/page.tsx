@@ -18,7 +18,7 @@ type NameColor = keyof typeof nameColors;
 export default function Start() {
   const [name, setName] = useState("");
   const [consent, setConsent] = useState(false);
-  const [selectedColor, setSelectedColor] = useState<NameColor>("blue");
+  const [selectedColor, setSelectedColor] = useState<NameColor>("pink");
   const router = useRouter();
 
   const handleSubmit = (e: React.FormEvent) => {

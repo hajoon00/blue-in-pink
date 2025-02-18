@@ -91,7 +91,7 @@ export default function LandingPage() {
               </section>
 
               <section>
-                <h3 className="font- octarine text-lg text-gray-800 mb-2">
+                <h3 className="font-octarine text-lg text-gray-800 mb-2">
                   2. My White Turkish Angora, Hasom
                 </h3>
                 <p>
