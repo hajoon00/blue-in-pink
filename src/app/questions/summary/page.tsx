@@ -32,24 +32,44 @@ const colors = {
   round2: "#FFDCE1",
 };
 
+// At the top of the file, add the font as base64
+// const OCTARINE_BOLD_BASE64 = ""; // You'll need to add the base64 string of your font file here
+
+// Function to get word frequency
+// function getWordFrequency(words: string[]): { [key: string]: number } {
+//   return words.reduce((acc, word) => {
+//     acc[word] = (acc[word] || 0) + 1;
+//     return acc;
+//   }, {} as { [key: string]: number });
+// }
+
 // Add this back near the top of the file
 function getRandomRotation() {
   return Math.floor(Math.random() * 181) - 90; // Random angle between -90 and 90
 }
 
+// Add this check
+const isBrowser = typeof window !== "undefined";
+
 export default function Summary() {
-  // All hooks at the top level without any conditions
+  // All useState hooks at the top level
   const [keywords, setKeywords] = useState<Keywords>({
     round1: [],
     round2: [],
   });
   const [loading, setLoading] = useState(true);
   const [userName, setUserName] = useState("");
-  const [userColor, setUserColor] = useState<keyof typeof colors.name>("pink");
+  const [userColor, setUserColor] = useState<keyof typeof colors.name>("blue");
 
+  // Update cloud dimensions to 4:5 ratio
+  const cloudDimensions = {
+    width: 400,
+    height: 500, // Changed from 720 to maintain 4:5 ratio
+  };
+
+  // useEffect at the top level
   useEffect(() => {
-    // Move browser check inside useEffect
-    if (typeof window === "undefined") return;
+    if (!isBrowser) return;
 
     try {
       const savedName = localStorage.getItem("userName") || "there";
@@ -64,7 +84,11 @@ export default function Summary() {
       const round2Keywords = JSON.parse(
         localStorage.getItem("round2Keywords") || "[]"
       );
-      setKeywords({ round1: round1Keywords, round2: round2Keywords });
+
+      setKeywords({
+        round1: round1Keywords,
+        round2: round2Keywords,
+      });
     } catch (error) {
       console.error("Failed to load data:", error);
     } finally {
@@ -72,13 +96,7 @@ export default function Summary() {
     }
   }, []);
 
-  // 3. Constants and other variables after hooks
-  const cloudDimensions = {
-    width: 400,
-    height: 500,
-  };
-
-  // 4. Rest of the component logic
+  // Prepare data for word cloud with name and repeated words
   const words: WordData[] = [];
 
   // Add name 5 times with varying sizes
@@ -148,8 +166,6 @@ export default function Summary() {
 
       // Get SVG data
       const svgData = element.innerHTML;
-
-      console.log("SVG Data:", svgData);
       const svgBlob = new Blob(
         [
           `
@@ -169,13 +185,9 @@ export default function Summary() {
       );
 
       // Convert SVG to Image
-      
       const url = URL.createObjectURL(svgBlob);
       const img = new Image();
-      setTimeout(() => {
-        img.src = url;
-      }, 100);
-      
+      img.src = url;
 
       await new Promise((resolve) => {
         img.onload = () => {
@@ -219,7 +231,7 @@ export default function Summary() {
     <main className="min-h-screen p-4 sm:p-6 bg-gradient-to-b from-[#FFDCE1] to-[#B4DAF9] flex justify-center items-center">
       <div className="w-full max-w-2xl mx-auto space-y-6 sm:space-y-8">
         <div className="text-center">
-          <h1 className="text-3xl font-bold text-gray-800 font- octarine">
+          <h1 className="text-3xl font-bold text-gray-800 font-['Octarine_Bold']">
             {userName}&apos;s BLUE IN PINK
           </h1>
           <p className="text-gray-600 mt-2">
@@ -232,7 +244,7 @@ export default function Summary() {
           {/* Round 1 Keywords */}
           <div className="bg-white/80 backdrop-blur-sm rounded-lg p-6 shadow-lg">
             <h2 className="mb-4">
-              <span className="block text-xl font-semibold text-gray-800 font- octarine">
+              <span className="block text-xl font-semibold text-gray-800 font-['Octarine_Bold']">
                 BLUE
               </span>
               <span className="block text-sm text-gray-500 mt-1">
@@ -256,7 +268,7 @@ export default function Summary() {
           {/* Round 2 Keywords */}
           <div className="bg-white/80 backdrop-blur-sm rounded-lg p-6 shadow-lg">
             <h2 className="mb-4">
-              <span className="block text-xl font-semibold text-gray-800 font- octarine">
+              <span className="block text-xl font-semibold text-gray-800 font-['Octarine_Bold']">
                 PINK
               </span>
               <span className="block text-sm text-gray-500 mt-1">
@@ -280,7 +292,7 @@ export default function Summary() {
 
         {/* Word Cloud */}
         <div className="wordcloud-wrapper bg-white/80 backdrop-blur-sm rounded-lg p-6 shadow-lg">
-          <h2 className="text-xl font-semibold text-gray-800 mb-4 text-center font- octarine">
+          <h2 className="text-xl font-semibold text-gray-800 mb-4 text-center font-['Octarine_Bold']">
             Your Word Cloud
           </h2>
           <div
