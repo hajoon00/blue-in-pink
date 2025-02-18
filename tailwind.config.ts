@@ -12,6 +12,9 @@ export default {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      fontFamily: {
+        octarine: ['Octarine Bold', 'sans-serif'], // Add your custom font here
+      },
     },
   },
   plugins: [],

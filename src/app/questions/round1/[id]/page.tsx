@@ -11,12 +11,12 @@ const questions = [
   `What's your favorite class this semester and why?`,
   `Have you changed your hairstyle recently? If so, how?`,
   `What's one personality trait people often describe you with, but you think it doesn't apply to you?`,
-  `What's your favorite hobby or pastime?`,
+  `What would you do if you have a day off?`,
   `What's your favorite food?`,
   `What's your go-to coffee order?`,
   `Do you prefer calling or texting to communicate?`,
   `Have you had the same wallpaper on your phone for a long time? Why did you choose it?`,
-  `How often do you make your bed?`,
+  `Do you make your bed every day?`,
 ];
 
 type QuestionParams = {

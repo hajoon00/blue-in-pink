@@ -23,6 +23,10 @@ export default function LandingPage() {
 
         {/* Introduction */}
         <div className="space-y-6">
+          <h1 className="text-3xl font-bold text-gray-800 font-octarine">
+            Welcome
+          </h1>
+
           <p className="text-gray-600 text-lg leading-relaxed">
             BLUE IN PINK is a personality exploration project that reflects two
             different sides of how others might perceive you and how you see
