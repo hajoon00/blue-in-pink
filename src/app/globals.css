@@ -15,7 +15,7 @@ body {
 
 @font-face {
   font-family: 'Octarine Bold';
-  src: url('/fonts/Octarine-Bold.otf') format('opentype');
+  src: url('/fonts/Octarine-Light.otf') format('opentype');
   font-weight: bold;
   font-style: normal;
   font-display: swap;
