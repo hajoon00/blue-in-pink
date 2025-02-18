@@ -147,7 +147,12 @@ export default function Summary() {
       document.body.style.cursor = "wait";
 
       // Get SVG data
-      const svgData = element.innerHTML;
+      const svgData = `
+      <svg width="400" height="500" xmlns="http://www.w3.org/2000/svg">
+        <rect width="100%" height="100%" fill="white"/>
+        <text x="50%" y="50%" font-size="40" text-anchor="middle" fill="black">Test</text>
+      </svg>
+      `;
 
       console.log("SVG Data:", svgData);
       const svgBlob = new Blob(
