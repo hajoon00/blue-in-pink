@@ -52,6 +52,7 @@ function getRandomRotation() {
 const isBrowser = typeof window !== "undefined";
 
 export default function Summary() {
+  // All useState hooks at the top level
   const [keywords, setKeywords] = useState<Keywords>({
     round1: [],
     round2: [],
@@ -66,8 +67,9 @@ export default function Summary() {
     height: 500, // Changed from 720 to maintain 4:5 ratio
   };
 
+  // useEffect at the top level
   useEffect(() => {
-    if (!isBrowser) return; // Exit if not in browser
+    if (!isBrowser) return;
 
     try {
       const savedName = localStorage.getItem("userName") || "there";
@@ -251,7 +253,7 @@ export default function Summary() {
             </h2>
             <div className="space-y-2">
               {keywords.round1.map((keyword, index) => (
-                <div key={index} className="flex items-center gap-2">
+                <div key={keyword} className="flex items-center gap-2">
                   <span className="text-sm text-gray-500 w-6">
                     {index + 1}.
                   </span>
@@ -275,7 +277,7 @@ export default function Summary() {
             </h2>
             <div className="space-y-2">
               {keywords.round2.map((keyword, index) => (
-                <div key={index} className="flex items-center gap-2">
+                <div key={keyword} className="flex items-center gap-2">
                   <span className="text-sm text-gray-500 w-6">
                     {index + 1}.
                   </span>

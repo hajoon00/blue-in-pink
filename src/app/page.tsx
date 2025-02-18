@@ -2,7 +2,6 @@
 
 import Link from "next/link";
 import { useState } from "react";
-import { useRouter } from "next/navigation";
 import Image from "next/image";
 
 const nameColors = {
@@ -55,8 +54,8 @@ export default function LandingPage() {
           </p>
 
           <p className="text-gray-600 text-lg leading-relaxed">
-            Both sides are equally important and you don't have to be one or the
-            other.
+            Both sides are equally important and you don&apos;t have to be one
+            or the other.
           </p>
 
           <p className="text-gray-600 text-lg leading-relaxed">
@@ -113,10 +112,10 @@ export default function LandingPage() {
                   eyes are a striking sky blue. Many of my friends assume he
                   must be elegant and aloof, but in reality, he is nothing like
                   that. Again, this reflects the idea that outward appearance
-                  doesn't always match inner personality. This led me to think:
-                  what if Hasom's pink skin (how others see him) and his blue
-                  eyes (how he sees the world) could visually express this
-                  concept?
+                  doesn&apos;t always match inner personality. This led me to
+                  think: what if Hasom&apos;s pink skin (how others see him) and
+                  his blue eyes (how he sees the world) could visually express
+                  this concept?
                 </p>
               </section>
 
