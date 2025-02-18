@@ -18,9 +18,9 @@ export default function Round2Start() {
 
         <div className="bg-white/80 backdrop-blur-sm rounded-lg p-6 shadow-lg">
           <p className="text-gray-600">
-            In this round, we'll ask you questions about your self-perception
-            and personal traits. Your answers will help create a more complete
-            picture of your personality.
+            In this round, we&apos;ll ask you questions about your
+            self-perception and personal traits. Your answers will help create a
+            more complete picture of your personality.
           </p>
         </div>
 
