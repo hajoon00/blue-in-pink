@@ -15,7 +15,7 @@ export async function POST(request: Request) {
     const { answers }: { answers: Answer[] } = await request.json();
     
     // Format Q&A for OpenAI
-    const formattedQA = answers.map((qa: any) => 
+    const formattedQA = answers.map((qa: Answer) => 
       `Question: ${qa.question}\nAnswer: ${qa.answer}`
     ).join("\n\n");
 

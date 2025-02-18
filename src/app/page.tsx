@@ -49,9 +49,9 @@ export default function LandingPage() {
           </p>
 
           <p className="text-gray-600 text-lg leading-relaxed">
-            But please note, this is not a scientific personality test. It's a
-            fun way to explore your personality and see how others might see
-            you.
+            But please note, this is not a scientific personality test.
+            It&apos;s a fun way to explore your personality and see how others
+            might see you.
           </p>
 
           <p className="text-gray-600 text-lg leading-relaxed">

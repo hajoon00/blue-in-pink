@@ -13,8 +13,8 @@ export default function Round1() {
         <div className="text-center">
           <h1 className="text-2xl font-bold text-pink-600">Round 1</h1>
           <p className="text-gray-600 mt-4">
-            You're about to begin the first round of questions. Take your time
-            to reflect deeply on each question.
+            You&apos;re about to begin the first round of questions. Take your
+            time to reflect deeply on each question.
           </p>
           <p className="text-gray-600 mt-2">
             There will be 12 questions in this round.
