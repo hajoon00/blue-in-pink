@@ -14,8 +14,6 @@ const nameColors = {
   coral: "#FFD4D4", // Soft coral
 } as const;
 
-type NameColor = keyof typeof nameColors;
-
 export default function LandingPage() {
   const [isExpanded, setIsExpanded] = useState(false);
 

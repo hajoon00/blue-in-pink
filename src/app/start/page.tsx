@@ -51,7 +51,7 @@ export default function Start() {
                   htmlFor="name"
                   className="block text-gray-800 font-medium mb-2"
                 >
-                  What&apos;s your first name?
+                  What is your first name?
                 </label>
                 <input
                   type="text"

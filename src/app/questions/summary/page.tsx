@@ -32,27 +32,13 @@ const colors = {
   round2: "#FFDCE1",
 };
 
-// At the top of the file, add the font as base64
-// const OCTARINE_BOLD_BASE64 = ""; // You'll need to add the base64 string of your font file here
-
-// Function to get word frequency
-// function getWordFrequency(words: string[]): { [key: string]: number } {
-//   return words.reduce((acc, word) => {
-//     acc[word] = (acc[word] || 0) + 1;
-//     return acc;
-//   }, {} as { [key: string]: number });
-// }
-
 // Add this back near the top of the file
 function getRandomRotation() {
   return Math.floor(Math.random() * 181) - 90; // Random angle between -90 and 90
 }
 
-// Add this check
-const isBrowser = typeof window !== "undefined";
-
 export default function Summary() {
-  // Move all hooks to the top, before any other code
+  // All hooks at the top level without any conditions
   const [keywords, setKeywords] = useState<Keywords>({
     round1: [],
     round2: [],
@@ -62,7 +48,8 @@ export default function Summary() {
   const [userColor, setUserColor] = useState<keyof typeof colors.name>("blue");
 
   useEffect(() => {
-    if (!isBrowser) return;
+    // Move browser check inside useEffect
+    if (typeof window === "undefined") return;
 
     try {
       const savedName = localStorage.getItem("userName") || "there";
@@ -77,11 +64,7 @@ export default function Summary() {
       const round2Keywords = JSON.parse(
         localStorage.getItem("round2Keywords") || "[]"
       );
-
-      setKeywords({
-        round1: round1Keywords,
-        round2: round2Keywords,
-      });
+      setKeywords({ round1: round1Keywords, round2: round2Keywords });
     } catch (error) {
       console.error("Failed to load data:", error);
     } finally {
@@ -89,13 +72,13 @@ export default function Summary() {
     }
   }, []);
 
-  // Move cloudDimensions after all hooks
+  // 3. Constants and other variables after hooks
   const cloudDimensions = {
     width: 400,
     height: 500,
   };
 
-  // Prepare data for word cloud with name and repeated words
+  // 4. Rest of the component logic
   const words: WordData[] = [];
 
   // Add name 5 times with varying sizes
