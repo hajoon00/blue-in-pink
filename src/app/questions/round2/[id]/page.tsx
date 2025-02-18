@@ -12,7 +12,7 @@ const questions = [
   `What is something small about yourself that you think defines you?`,
   `If you had to compare yourself to an animal, which one would it be and why?`,
   `What is your favorite part of yourself?`,
-  `Whatis your least favorite part of yourself?`,
+  `What is your least favorite part of yourself?`,
 ];
 
 type QuestionParams = {
