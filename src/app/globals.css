@@ -14,8 +14,8 @@ body {
 }
 
 @font-face {
-  font-family: 'Octarine Light';
-  src: url('/fonts/Octarine-Light.otf') format('opentype');
+  font-family: 'Octarine Bold';
+  src: url('/fonts/Octarine-Bold.otf') format('opentype');
   font-weight: bold;
   font-style: normal;
   font-display: swap;
@@ -23,5 +23,5 @@ body {
 
 /* Add a fallback class */
 .font-octarine {
-  font-family: 'Octarine Light', system-ui, sans-serif;
+  font-family: 'Octarine Bold', system-ui, sans-serif;
 }

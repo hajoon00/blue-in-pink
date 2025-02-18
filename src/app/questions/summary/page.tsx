@@ -148,13 +148,15 @@ export default function Summary() {
 
       // Get SVG data
       const svgData = element.innerHTML;
+
+      console.log("SVG Data:", svgData);
       const svgBlob = new Blob(
         [
           `
         <svg width="400" height="500" xmlns="http://www.w3.org/2000/svg">
           <style>
             text {
-              font-family: 'Octarine Light', Arial, sans-serif;
+              font-family: 'Octarine Bold', Arial, sans-serif;
               font-weight: bold;
             }
           </style>
@@ -296,7 +298,7 @@ export default function Summary() {
                 padding={6}
                 rotate={() => getRandomRotation()}
                 spiral="rectangular"
-                font={"Octarine Light"}
+                font={"Octarine Bold"}
                 random={() => 0.5}
               >
                 {(cloudWords) =>
@@ -313,7 +315,7 @@ export default function Summary() {
                       textAnchor="middle"
                       transform={`translate(${w.x}, ${w.y}) rotate(${w.rotate})`}
                       fontSize={w.size}
-                      fontFamily={"Octarine Light"}
+                      fontFamily={"Octarine Bold"}
                       style={{
                         transition: "all 0.3s ease",
                         cursor: "default",

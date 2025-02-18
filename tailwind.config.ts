@@ -13,7 +13,7 @@ export default {
         foreground: "var(--foreground)",
       },
       fontFamily: {
-        octarine: ['Octarine Light', 'sans-serif'], // Add your custom font here
+        octarine: ['Octarine Bold', 'sans-serif'], // Add your custom font here
       },
     },
   },

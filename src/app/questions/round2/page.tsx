@@ -7,7 +7,7 @@ export default function Round2Start() {
     <main className="min-h-screen p-4 sm:p-6 bg-[#B4DAF9] flex justify-center items-center">
       <div className="w-full max-w-md mx-auto space-y-6 sm:space-y-8">
         <div className="text-center">
-          <h1 className="text-3xl font-bold text-gray-800 font-['OctarineBold']">
+          <h1 className="text-3xl font-bold text-gray-800 font-octarine">
             Round 2
           </h1>
           <p className="text-gray-600 mt-4">
