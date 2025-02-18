@@ -20,3 +20,8 @@ body {
   font-style: normal;
   font-display: swap;
 }
+
+/* Add a fallback class */
+.font-octarine {
+  font-family: 'Octarine Bold', system-ui, sans-serif;
+}

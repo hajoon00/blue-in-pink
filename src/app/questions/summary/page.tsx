@@ -213,7 +213,7 @@ export default function Summary() {
     <main className="min-h-screen p-4 sm:p-6 bg-gradient-to-b from-[#FFDCE1] to-[#B4DAF9] flex justify-center items-center">
       <div className="w-full max-w-2xl mx-auto space-y-6 sm:space-y-8">
         <div className="text-center">
-          <h1 className="text-3xl font-bold text-gray-800 font-['Octarine Bold']">
+          <h1 className="text-3xl font-bold text-gray-800 font- octarine">
             {userName}&apos;s BLUE IN PINK
           </h1>
           <p className="text-gray-600 mt-2">
@@ -226,7 +226,7 @@ export default function Summary() {
           {/* Round 1 Keywords */}
           <div className="bg-white/80 backdrop-blur-sm rounded-lg p-6 shadow-lg">
             <h2 className="mb-4">
-              <span className="block text-xl font-semibold text-gray-800 font-['Octarine Bold']">
+              <span className="block text-xl font-semibold text-gray-800 font- octarine">
                 BLUE
               </span>
               <span className="block text-sm text-gray-500 mt-1">
@@ -250,7 +250,7 @@ export default function Summary() {
           {/* Round 2 Keywords */}
           <div className="bg-white/80 backdrop-blur-sm rounded-lg p-6 shadow-lg">
             <h2 className="mb-4">
-              <span className="block text-xl font-semibold text-gray-800 font-['Octarine Bold']">
+              <span className="block text-xl font-semibold text-gray-800 font- octarine">
                 PINK
               </span>
               <span className="block text-sm text-gray-500 mt-1">
@@ -274,7 +274,7 @@ export default function Summary() {
 
         {/* Word Cloud */}
         <div className="wordcloud-wrapper bg-white/80 backdrop-blur-sm rounded-lg p-6 shadow-lg">
-          <h2 className="text-xl font-semibold text-gray-800 mb-4 text-center font-['Octarine Bold']">
+          <h2 className="text-xl font-semibold text-gray-800 mb-4 text-center font- octarine">
             Your Word Cloud
           </h2>
           <div

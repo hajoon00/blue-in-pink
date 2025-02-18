@@ -64,13 +64,13 @@ export default function LandingPage() {
         {/* Collapsible Project Background */}
         {isExpanded && (
           <div className="space-y-6 text-gray-600 leading-relaxed bg-gray-50 p-6 rounded-lg">
-            <h2 className="font-['Octarine Bold'] text-xl text-gray-800">
+            <h2 className="font-octarine text-xl text-gray-800">
               This project stems from two main ideas
             </h2>
 
             <div className="space-y-6">
               <section>
-                <h3 className="font-['Octarine Bold'] text-lg text-gray-800 mb-2">
+                <h3 className="font-octarine text-lg text-gray-800 mb-2">
                   1. The MBTI Craze in Korea
                 </h3>
                 <p>
@@ -91,7 +91,7 @@ export default function LandingPage() {
               </section>
 
               <section>
-                <h3 className="font-['Octarine Bold'] text-lg text-gray-800 mb-2">
+                <h3 className="font- octarine text-lg text-gray-800 mb-2">
                   2. My White Turkish Angora, Hasom
                 </h3>
                 <p>
@@ -108,7 +108,7 @@ export default function LandingPage() {
               </section>
 
               <section>
-                <h3 className="font-['Octarine Bold'] text-lg text-gray-800 mb-2">
+                <h3 className="font- octarine text-lg text-gray-800 mb-2">
                   About This Project
                 </h3>
                 <p>

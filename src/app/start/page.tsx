@@ -35,7 +35,7 @@ export default function Start() {
     <main className="min-h-screen p-4 sm:p-6 bg-gradient-to-b from-[#FFDCE1] to-[#B4DAF9]">
       <div className="w-full max-w-md mx-auto space-y-6 sm:space-y-8">
         <div className="text-center">
-          <h1 className="text-3xl font-bold text-gray-800 font-['Octarine Bold']">
+          <h1 className="text-3xl font-bold text-gray-800 font- octarine">
             Welcome
           </h1>
           <p className="text-gray-600 mt-2">
