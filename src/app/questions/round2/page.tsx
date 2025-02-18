@@ -10,8 +10,9 @@ export default function Round2Start() {
           <h1 className="text-3xl font-bold text-gray-800 font-['Octarine_Bold']">
             Round 2
           </h1>
-          <p className="text-gray-600 mt-2">
-            Now, let's focus on how you see yourself
+          <p className="text-gray-600 mt-4">
+            You&apos;re about to begin the second round of questions. Take your
+            time to reflect deeply on each question.
           </p>
         </div>
 
@@ -30,6 +31,12 @@ export default function Round2Start() {
           >
             Start Round 2 →
           </Link>
+        </div>
+
+        <div className="text-center">
+          <p className="text-gray-600 mt-2">
+            Let&apos;s explore how you see yourself.
+          </p>
         </div>
       </div>
     </main>
