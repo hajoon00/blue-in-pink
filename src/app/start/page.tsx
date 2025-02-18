@@ -52,7 +52,7 @@ export default function Start() {
                   htmlFor="name"
                   className="block text-gray-800 font-medium mb-2"
                 >
-                  What's your first name?
+                  What&apos;s your first name?
                 </label>
                 <input
                   type="text"
@@ -70,7 +70,7 @@ export default function Start() {
 
               <div>
                 <label className="block text-gray-800 font-medium mb-2">
-                  Choose your name's color
+                  Choose your name&apos;s color
                 </label>
                 <div className="grid grid-cols-7 gap-2">
                   {(Object.keys(nameColors) as NameColor[]).map((color) => (

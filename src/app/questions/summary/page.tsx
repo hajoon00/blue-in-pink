@@ -4,7 +4,6 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import { Text } from "@visx/text";
 import { Wordcloud } from "@visx/wordcloud";
-import html2canvas from "html2canvas";
 // import { scaleLog } from "@visx/scale";
 
 type Keywords = {
@@ -34,17 +33,17 @@ const colors = {
 };
 
 // At the top of the file, add the font as base64
-const OCTARINE_BOLD_BASE64 = ""; // You'll need to add the base64 string of your font file here
+// const OCTARINE_BOLD_BASE64 = ""; // You'll need to add the base64 string of your font file here
 
 // Function to get word frequency
-function getWordFrequency(words: string[]): { [key: string]: number } {
-  return words.reduce((acc, word) => {
-    acc[word] = (acc[word] || 0) + 1;
-    return acc;
-  }, {} as { [key: string]: number });
-}
+// function getWordFrequency(words: string[]): { [key: string]: number } {
+//   return words.reduce((acc, word) => {
+//     acc[word] = (acc[word] || 0) + 1;
+//     return acc;
+//   }, {} as { [key: string]: number });
+// }
 
-// Remove the fixed rotation angles array and add a function to generate random angles
+// Add this back near the top of the file
 function getRandomRotation() {
   return Math.floor(Math.random() * 181) - 90; // Random angle between -90 and 90
 }
@@ -231,7 +230,7 @@ export default function Summary() {
       <div className="w-full max-w-2xl mx-auto space-y-6 sm:space-y-8">
         <div className="text-center">
           <h1 className="text-3xl font-bold text-gray-800 font-['Octarine_Bold']">
-            {userName}'s BLUE IN PINK
+            {userName}&apos;s BLUE IN PINK
           </h1>
           <p className="text-gray-600 mt-2">
             Based on your answers, here are 20 keywords that describe your
