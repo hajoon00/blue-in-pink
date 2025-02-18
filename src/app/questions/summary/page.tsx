@@ -154,7 +154,7 @@ export default function Summary() {
         <svg width="400" height="500" xmlns="http://www.w3.org/2000/svg">
           <style>
             text {
-              font-family: 'Octarine Bold', Arial, sans-serif;
+              font-family: 'Octarine Light', Arial, sans-serif;
               font-weight: bold;
             }
           </style>
@@ -296,7 +296,7 @@ export default function Summary() {
                 padding={6}
                 rotate={() => getRandomRotation()}
                 spiral="rectangular"
-                font={"Octarine Bold"}
+                font={"Octarine Light"}
                 random={() => 0.5}
               >
                 {(cloudWords) =>
@@ -313,7 +313,7 @@ export default function Summary() {
                       textAnchor="middle"
                       transform={`translate(${w.x}, ${w.y}) rotate(${w.rotate})`}
                       fontSize={w.size}
-                      fontFamily={"Octarine Bold"}
+                      fontFamily={"Octarine Light"}
                       style={{
                         transition: "all 0.3s ease",
                         cursor: "default",
