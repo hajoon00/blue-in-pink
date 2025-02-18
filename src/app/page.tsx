@@ -96,14 +96,14 @@ export default function LandingPage() {
                 </h3>
                 <p>
                   I have a Turkish Angora cat named Hasom. He is covered in pure
-                  white fur, but underneath, his skin is actually pink, and his
-                  eyes are a striking sky blue. Many of my friends assume he
-                  must be elegant and aloof, but in reality, he is nothing like
-                  that. Again, this reflects the idea that outward appearance
-                  doesn&apos;t always match inner personality. This led me to
-                  think: what if Hasom&apos;s pink skin (how others see him) and
-                  his blue eyes (how he sees the world) could visually express
-                  this concept?
+                  white fur, but his skin is actually pink and his eyes are a
+                  striking sky blue. Many of my friends assume he must be
+                  elegant and aloof when they first see him. However, he is
+                  nothing like that. Again, this reflects the idea that outward
+                  appearance doesn&apos;t always match inner personality. This
+                  led me to think: what if Hasom&apos;s pink skin (how others
+                  see him) and his blue eyes (how he sees the world) could
+                  visually express this concept?
                 </p>
               </section>
 
