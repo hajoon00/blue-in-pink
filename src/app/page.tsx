@@ -4,16 +4,6 @@ import Link from "next/link";
 import { useState } from "react";
 import Image from "next/image";
 
-const nameColors = {
-  pink: "#FFDCE1", // Main pink
-  blue: "#B4DAF9", // Main blue
-  sage: "#C8DAC2", // Soft sage green
-  peach: "#FFD4C2", // Soft peach
-  lilac: "#E2D4F3", // Soft lilac
-  mint: "#C2E6E1", // Soft mint
-  coral: "#FFD4D4", // Soft coral
-} as const;
-
 export default function LandingPage() {
   const [isExpanded, setIsExpanded] = useState(false);
 

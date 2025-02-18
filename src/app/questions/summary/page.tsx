@@ -45,7 +45,7 @@ export default function Summary() {
   });
   const [loading, setLoading] = useState(true);
   const [userName, setUserName] = useState("");
-  const [userColor, setUserColor] = useState<keyof typeof colors.name>("blue");
+  const [userColor, setUserColor] = useState<keyof typeof colors.name>("pink");
 
   useEffect(() => {
     // Move browser check inside useEffect

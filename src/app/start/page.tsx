@@ -39,7 +39,7 @@ export default function Start() {
             Welcome
           </h1>
           <p className="text-gray-600 mt-2">
-            Let's get to know you through a series of questions
+            Let&apos;s get to know you through a series of questions
           </p>
         </div>
 
