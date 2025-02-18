@@ -52,7 +52,7 @@ function getRandomRotation() {
 const isBrowser = typeof window !== "undefined";
 
 export default function Summary() {
-  // All useState hooks at the top level
+  // Move all hooks to the top, before any other code
   const [keywords, setKeywords] = useState<Keywords>({
     round1: [],
     round2: [],
@@ -61,13 +61,6 @@ export default function Summary() {
   const [userName, setUserName] = useState("");
   const [userColor, setUserColor] = useState<keyof typeof colors.name>("blue");
 
-  // Update cloud dimensions to 4:5 ratio
-  const cloudDimensions = {
-    width: 400,
-    height: 500, // Changed from 720 to maintain 4:5 ratio
-  };
-
-  // useEffect at the top level
   useEffect(() => {
     if (!isBrowser) return;
 
@@ -96,6 +89,12 @@ export default function Summary() {
     }
   }, []);
 
+  // Move cloudDimensions after all hooks
+  const cloudDimensions = {
+    width: 400,
+    height: 500,
+  };
+
   // Prepare data for word cloud with name and repeated words
   const words: WordData[] = [];
 
@@ -117,7 +116,7 @@ export default function Summary() {
   }
 
   // Add each round1 word 5 times
-  keywords.round1.forEach((word, index) => {
+  keywords.round1.forEach((word) => {
     for (let i = 0; i < 5; i++) {
       words.push({
         text: word,
@@ -136,7 +135,7 @@ export default function Summary() {
   });
 
   // Add each round2 word 5 times
-  keywords.round2.forEach((word, index) => {
+  keywords.round2.forEach((word) => {
     for (let i = 0; i < 5; i++) {
       words.push({
         text: word,

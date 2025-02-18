@@ -42,7 +42,7 @@ export default function LandingPage() {
           </p>
 
           <p className="text-gray-600 text-lg leading-relaxed">
-            Through a series of questions, we'll create a unique personal
+            Through a series of questions, we&apos;ll create a unique personal
             Wordcloud that visualizes this duality using the colors blue and
             pink.
           </p>

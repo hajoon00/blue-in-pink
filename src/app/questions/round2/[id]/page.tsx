@@ -6,13 +6,13 @@ import { useState, useEffect } from "react";
 import { use } from "react";
 
 const questions = [
-  "How would you describe yourself? List five words that describe you.", // Special handling for first question
+  "How would you describe yourself? List five words that describe you.",
   "How do you usually handle stress or pressure?",
   "What kind of situations bring out the best in you?",
-  "What's something small about yourself that you think defines you?",
+  "What&apos;s something small about yourself that you think defines you?",
   "If you had to compare yourself to an animal, which one would it be and why?",
-  "What's your favorite part of yourself?",
-  "What's your least favorite part of yourself?",
+  "What&apos;s your favorite part of yourself?",
+  "What&apos;s your least favorite part of yourself?",
 ];
 
 type QuestionParams = {
