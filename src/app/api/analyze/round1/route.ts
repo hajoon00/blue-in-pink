@@ -5,9 +5,14 @@ const openai = new OpenAI({
   apiKey: process.env.OPENAI_API_KEY,
 });
 
+interface Answer {
+  question: string;
+  answer: string;
+}
+
 export async function POST(request: Request) {
   try {
-    const { answers } = await request.json();
+    const { answers }: { answers: Answer[] } = await request.json();
 
     // Format Q&A for OpenAI
     const formattedQA = answers.map((qa: any) => 
