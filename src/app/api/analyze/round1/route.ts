@@ -28,7 +28,7 @@ Return only the keywords as a comma-separated list.`;
 
     const completion = await openai.chat.completions.create({
       messages: [{ role: "user", content: prompt }],
-      model: "gpt-3.5-turbo",
+      model: "gpt-4o-mini",
       temperature: 0.7,
       max_tokens: 100,
     });
